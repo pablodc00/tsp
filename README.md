@@ -3,12 +3,12 @@ Travelling salesman problem
 
 
 ## Project specs
-Java8
-maven 3.6.2
+* Java8
+* maven 3.6.2
 
 
 ## Run project:
-mvn exec:java -Dexec.mainClass="io.ingnition.App"
+`mvn exec:java -Dexec.mainClass="io.ingnition.App"`
 
 
 ## Idea:
