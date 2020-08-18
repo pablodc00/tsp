@@ -12,7 +12,7 @@ public class App {
 		Edge edgeAB = new Edge("A", "B", 20);
 		Edge edgeBC = new Edge("B", "C", 34);
 		Edge edgeCD = new Edge("C", "D", 12);
-		Edge edgeDA = new Edge("D", "A", 42);
+		Edge edgeAD = new Edge("A", "D", 42);
 		Edge edgeBD = new Edge("B", "D", 30);
 		Edge edgeAC = new Edge("A", "C", 35);
 		
@@ -27,7 +27,7 @@ public class App {
 		paths1.add(edgeAB);
 		paths1.add(edgeBC);
 		paths1.add(edgeCD);
-		paths1.add(edgeDA);		
+		paths1.add(edgeAD);		
 		Path path1 = new Path(paths1);
 		path1.calculateDistance();
 		paths.add(path1);
@@ -37,7 +37,7 @@ public class App {
 		paths2.add(edgeAB);
 		paths2.add(edgeBD);
 		paths2.add(edgeCD);
-		paths2.add(edgeBD);		
+		paths2.add(edgeAC);		
 		Path path2 = new Path(paths2);
 		path2.calculateDistance();
 		paths.add(path2);
@@ -47,7 +47,7 @@ public class App {
 		paths3.add(edgeAC);
 		paths3.add(edgeBC);
 		paths3.add(edgeBD);
-		paths3.add(edgeDA);		
+		paths3.add(edgeAD);		
 		Path path3 = new Path(paths3);
 		path3.calculateDistance();
 		paths.add(path3);
