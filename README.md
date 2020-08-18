@@ -14,7 +14,7 @@ mvn exec:java -Dexec.mainClass="io.ingnition.App"
 ## Idea:
 Created a structure in order to support 
 getting shortest possible route that visits each Node and returns to the origin Node
-with O(1)
+with O(n) using a simple list
 
 
 ## Example
