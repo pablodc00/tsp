@@ -1,21 +1,17 @@
 package io.ingnition;
 
 import java.util.LinkedList;
-import java.util.List;
-
-import org.apache.commons.lang3.Validate;
 
 public class Path {
-	private List<Edge> edges;
+	private LinkedList<Edge> edges;
 	private Integer distance;
-	
-	
-	public Path(List<Edge> edges, Integer distance) {
+
+
+	public Path(LinkedList<Edge> edges) {
 		this.edges = edges;
-		this.distance = distance;
 	}
-	
-	
+
+
 	public void calculateDistance() {
 		this.distance = this.edges
 				.stream()
@@ -25,21 +21,16 @@ public class Path {
 	
 	/**
 	 * Delete oldEdge from Path and insert newEdge1 and newEdge2
-	 * Pre-Conditions: 
-	 * 1 oldEdge.node1 = newEdge1.node1,
-	 * 2 oldEdge.node2 = newEdge2.node2,
-	 * 3 newEdge1.node2 = newEdge2.node1
 	 * @param oldEdge
 	 * @param newNode1
 	 * @param newNode2
 	 */
 	public void modifyPath(Edge oldEdge, Edge newEdge1, Edge newEdge2) {
-		Validate.isTrue(
-				oldEdge.getNode1().equals(newEdge1.getNode1()) &&
-				oldEdge.getNode2().equals(newEdge2.getNode2()) &&
-				newEdge1.getNode2().equals(newEdge2.getNode1()) 
-				);
-		
+		//Example, we have an edge A,C
+		//we want to create a node B between A,C
+		//then we create two edges A,B and B,C
+		//we delete edge A,C and insert in the same index
+		//the two new edges A,B and B,C
 		
 		int i = this.edges.indexOf(oldEdge);
 		this.edges.add(i, newEdge1);
@@ -47,10 +38,22 @@ public class Path {
 		this.edges.remove(oldEdge);
 		
 		//Recalculate distance of path
-		this.calculateDistance();
-		
-		
+		this.calculateDistance();		
+
+	}
+
+	public LinkedList getPath() {
+		return this.edges;
 	}
 	
 	
+	public Integer getDistance() {
+		return this.distance;
+	}
+	
+	
+	public void printPath() {
+		this.edges.forEach(System.out::println);
+		System.out.println("Total: " + this.distance);  
+	}
 }

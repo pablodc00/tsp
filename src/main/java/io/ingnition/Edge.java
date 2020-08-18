@@ -35,4 +35,11 @@ public class Edge {
 		this.weight = weight;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("[").append(this.node1).append(",").append(this.node2).append("]:").append(this.weight);		
+
+		return sb.toString();
+	}
 }
