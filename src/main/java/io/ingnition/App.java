@@ -71,6 +71,11 @@ public class App {
 			.get();
 		
 		minPath.printPath();
+		
+		
+		//TODO 
+		//Add node to graph
+		//need to call Path.modifyPath(Edge oldEdge, Edge newEdge1, Edge newEdge2)
 	}
 
 }
