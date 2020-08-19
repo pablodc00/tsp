@@ -10,11 +10,11 @@ public class App {
 	public static void main(String[] args) {
 		//create edges
 		Edge edgeAB = new Edge("A", "B", 20);
-		Edge edgeBC = new Edge("B", "C", 34);
+		Edge edgeBC = new Edge("B", "C", 30);
 		Edge edgeCD = new Edge("C", "D", 12);
-		Edge edgeAD = new Edge("A", "D", 42);
-		Edge edgeBD = new Edge("B", "D", 30);
-		Edge edgeAC = new Edge("A", "C", 35);
+		Edge edgeAD = new Edge("A", "D", 35);
+		Edge edgeBD = new Edge("B", "D", 34);
+		Edge edgeAC = new Edge("A", "C", 42);
 		
 		//Create list of paths for node A for testing purposes but
 		//we need to create list of paths for all nodes
