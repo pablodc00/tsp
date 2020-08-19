@@ -3,12 +3,12 @@ Travelling salesman problem
 
 
 ## Project specs
-Java8
-maven 3.6.2
+* Java8
+* maven 3.6.2
 
 
 ## Run project:
-mvn exec:java -Dexec.mainClass="io.ingnition.App"
+`mvn exec:java -Dexec.mainClass="io.ingnition.App"`
 
 
 ## Idea:
@@ -22,9 +22,9 @@ with O(n) using a simple list
 
 In this case the shortest path is:
 [A,B]:20
-[B,D]:30
+[B,C]:30
 [C,D]:12
-[A,C]:35
+[A,D]:35
 Total: 97
 
 `pablodc00@gmail.com`
