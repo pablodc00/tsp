@@ -14,7 +14,7 @@ Travelling salesman problem
 ## Idea:
 Created a structure in order to support 
 getting shortest possible route that visits each Node and returns to the origin Node
-with O(n) using a simple list
+with O(n) using a list
 
 
 ## Example
