@@ -15,6 +15,12 @@ public class App {
 		Edge edgeAD = new Edge("A", "D", 35);
 		Edge edgeBD = new Edge("B", "D", 34);
 		Edge edgeAC = new Edge("A", "C", 42);
+
+
+		Edge edgeBA = new Edge("A", "B", 20);
+		Edge edgeCA = new Edge("A", "C", 42);
+		Edge edgeDA = new Edge("A", "D", 35);
+
 		
 		//Create list of paths for node A for testing purposes but
 		//we need to create list of paths for all nodes
@@ -27,7 +33,7 @@ public class App {
 		paths1.add(edgeAB);
 		paths1.add(edgeBC);
 		paths1.add(edgeCD);
-		paths1.add(edgeAD);		
+		paths1.add(edgeDA);
 		Path path1 = new Path(paths1);
 		path1.calculateDistance();
 		paths.add(path1);
@@ -37,7 +43,7 @@ public class App {
 		paths2.add(edgeAB);
 		paths2.add(edgeBD);
 		paths2.add(edgeCD);
-		paths2.add(edgeAC);		
+		paths2.add(edgeCA);
 		Path path2 = new Path(paths2);
 		path2.calculateDistance();
 		paths.add(path2);
@@ -47,7 +53,7 @@ public class App {
 		paths3.add(edgeAC);
 		paths3.add(edgeBC);
 		paths3.add(edgeBD);
-		paths3.add(edgeAD);		
+		paths3.add(edgeDA);
 		Path path3 = new Path(paths3);
 		path3.calculateDistance();
 		paths.add(path3);
@@ -57,7 +63,7 @@ public class App {
 		paths4.add(edgeAC);
 		paths4.add(edgeCD);
 		paths4.add(edgeBD);
-		paths4.add(edgeAB);		
+		paths4.add(edgeBA);
 		Path path4 = new Path(paths4);
 		path4.calculateDistance();
 		paths.add(path4);
